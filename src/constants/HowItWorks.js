@@ -1,0 +1,2 @@
+export const title = 'How To Install Erzy?'
+export const subTitle = 'You can install Erzy Bot with a simple 3-step process that hardly takes 2 minutes. Once you have installed Erzy, take a fancy to start seeing your channel shooting into the stratosphere!'
