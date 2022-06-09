@@ -1,0 +1,19 @@
+.privacy {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.privacy h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.privacy h2 {
+  margin-bottom: 1rem;
+}
+.privacy div {
+  margin-bottom: 2rem;
+}
+.privacy p {
+  margin-bottom: 0.5rem;
+}

@@ -6,6 +6,8 @@ import {
   HeroButtonText,
   HeroGroup,
 } from './HeroStyles'
+import Zoom from 'react-reveal/Zoom'
+
 import { Button, SubTitle } from '../../styles/GlobalComponents'
 import Image from 'next/image'
 import largeHeroBg from '../../../public/images/bigHeroBg.png'
@@ -28,9 +30,14 @@ export const Hero = () => {
           <HeroButtonText>Free, no credit card required</HeroButtonText>
         </HeroGroup>
       </HeroIntro>
-      <HeroBg>
-        <Image src={width > mobileSize ? largeHeroBg : smallHeroBg} />
-      </HeroBg>
+      <Zoom>
+        <HeroBg>
+          <Image
+            src={width > mobileSize ? largeHeroBg : smallHeroBg}
+            alt="erzy team logo"
+          />
+        </HeroBg>
+      </Zoom>
     </HeroWrapper>
   )
 }

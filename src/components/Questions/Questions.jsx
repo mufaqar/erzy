@@ -7,9 +7,9 @@ import {
 import { Title, SubTitle } from '../../styles/GlobalComponents'
 import { QuestionItem } from '../QuestionItem/QuestionItem'
 import { questions } from '../../constants/Questions'
+import Bounce from 'react-reveal/Bounce'
 const middleIndex = Math.ceil(questions.length / 2)
 export const Questions = () => {
-  console.log(middleIndex)
   return (
     <QuestionsWrapper id="questions">
       <QuestionsHeader>
@@ -25,7 +25,11 @@ export const Questions = () => {
             .slice()
             .splice(0, middleIndex)
             .map((question) => {
-              return <QuestionItem key={question.title} data={question} />
+              return (
+                <Bounce right key={question.title}>
+                  <QuestionItem data={question} />
+                </Bounce>
+              )
             })}
         </QuestionsList>
         <QuestionsList>
@@ -33,7 +37,11 @@ export const Questions = () => {
             .slice()
             .splice(-middleIndex)
             .map((question) => {
-              return <QuestionItem key={question.title} data={question} />
+              return (
+                <Bounce left key={question.title}>
+                  <QuestionItem data={question} />
+                </Bounce>
+              )
             })}
         </QuestionsList>
       </QuestionsListWrapper>

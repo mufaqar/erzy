@@ -9,6 +9,7 @@ import {
 import { Title, SubTitle } from '../../styles/GlobalComponents/index.js'
 
 import { subTitle, title, f1, f2, f3 } from '../../constants/Features'
+import Wobble from 'react-reveal/Wobble'
 export const Features = () => {
   return (
     <FeaturesWrapper id="features">
@@ -23,23 +24,16 @@ export const Features = () => {
           <FeaturesTab>{f3.title}</FeaturesTab>
         </FeaturesTabList>
 
-        <FeaturesTabPanel>{f1.desc}</FeaturesTabPanel>
-        <FeaturesTabPanel>{f2.desc}</FeaturesTabPanel>
         <FeaturesTabPanel>
-          <div
-            style={{
-              background: 'linear-gradient(70.91deg, #07A3B2 0%, #667EEA 100%)',
-            }}
-          >
-            <div
-              style={{
-                background:
-                  'linear-gradient(70.91deg, #07A3B2 0%, #667EEA 100%)',
-              }}
-            >
-              {f3.desc}
-            </div>
-          </div>
+          <Wobble>{f1.desc}</Wobble>
+        </FeaturesTabPanel>
+        <FeaturesTabPanel>
+          {' '}
+          <Wobble>{f2.desc}</Wobble>
+        </FeaturesTabPanel>
+        <FeaturesTabPanel>
+          {' '}
+          <Wobble>{f3.desc}</Wobble>
         </FeaturesTabPanel>
       </FeaturesTabs>
     </FeaturesWrapper>

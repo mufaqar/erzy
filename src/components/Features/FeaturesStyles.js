@@ -15,9 +15,9 @@ export const FeaturesWrapper = styled.section`
     ),
     #07a3b2;
 
-    @media ${(props) => props.theme.breakpoints.xl} {
-      border-radius: 0;
-    }
+  @media ${(props) => props.theme.breakpoints.xl} {
+    border-radius: 0;
+  }
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 8.9rem 1.2rem;
   }
@@ -83,10 +83,22 @@ export const FeaturesTabList = styled(TabList)`
       margin-right: min(10vw, 7.5rem);
     }
   }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    > * {
+      &:not(&:last-child) {
+        margin-right: min(2vw, 7.5rem);
+      }
+    }
+  }
 `
 export const FeaturesTabPanel = styled(TabPanel)`
   > * {
-    padding: 5rem;
+    padding: 0 5rem;
     border-radius: 4rem;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    > * {
+      padding: 0rem 0.5rem;
+    }
   }
 `

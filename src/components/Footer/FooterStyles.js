@@ -104,14 +104,19 @@ export const FooterLink = styled.a`
     opacity: 0.8;
   }
 `
-export const FooterIconsList = styled.ul`
+export const FooterIconsList = styled.div`
   display: flex;
   align-items: center;
   > * {
     margin-right: 0.8rem;
   }
 `
-export const FooterIcon = styled.li`
+export const FooterIcon = styled.a`
   cursor: pointer;
-  transition: 0.3s ease opacity;
+  transition: 0.3s ease all;
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
 `

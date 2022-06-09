@@ -11,12 +11,10 @@ import {
 } from './BenefitsStyles.js'
 import { Title, SubTitle } from '../../styles/GlobalComponents/index.js'
 import Image from 'next/image'
-import benefitOne from '../../../public/images/Benefits1.png'
-import benefitTwo from '../../../public/images/Benefits2.png'
-import benefitThree from '../../../public/images/Benefits3.png'
-import benefitFour from '../../../public/images/Benefits4.png'
-import { subTitle, title, b1, b2, b3, b4 } from '../../constants/Benefits.js'
+import { subTitle, title, benefitsList } from '../../constants/Benefits.js'
+import Bounce from 'react-reveal/Bounce'
 
+const middleIndex = Math.ceil(benefitsList.length / 2)
 export const Benefits = () => {
   return (
     <BenefitsWrapper id="benefits">
@@ -29,37 +27,41 @@ export const Benefits = () => {
       </BenefitsHeader>
       <BenefitsList>
         <BenefitsGroup>
-          <BenefitsItem>
-            <BenefitsItemImage>
-              <Image src={benefitOne} />
-            </BenefitsItemImage>
-            <BenefitsItemTitle>{b1.title}</BenefitsItemTitle>
-            <BenefitsItemText>{b1.desc}</BenefitsItemText>
-          </BenefitsItem>
-          <BenefitsItem>
-            <BenefitsItemImage>
-              <Image src={benefitTwo} />
-            </BenefitsItemImage>
-            <BenefitsItemTitle>{b2.title}</BenefitsItemTitle>
-            <BenefitsItemText>{b2.desc}</BenefitsItemText>
-          </BenefitsItem>
+          {benefitsList
+            .slice()
+            .splice(0, middleIndex)
+            .map((item, idx) => {
+              return (
+                <Bounce key={idx}>
+                  <BenefitsItem>
+                    <BenefitsItemImage>
+                      <Image src={item.icon} alt="ilustation" />
+                    </BenefitsItemImage>
+                    <BenefitsItemTitle>{item.title}</BenefitsItemTitle>
+                    <BenefitsItemText>{item.desc}</BenefitsItemText>
+                  </BenefitsItem>
+                </Bounce>
+              )
+            })}
         </BenefitsGroup>
 
         <BenefitsGroup>
-          <BenefitsItem>
-            <BenefitsItemImage>
-              <Image src={benefitThree} />
-            </BenefitsItemImage>
-            <BenefitsItemTitle>{b3.title}</BenefitsItemTitle>
-            <BenefitsItemText>{b3.desc}</BenefitsItemText>
-          </BenefitsItem>
-          <BenefitsItem>
-            <BenefitsItemImage>
-              <Image src={benefitFour} />
-            </BenefitsItemImage>
-            <BenefitsItemTitle>{b4.title}</BenefitsItemTitle>
-            <BenefitsItemText>{b4.desc}</BenefitsItemText>
-          </BenefitsItem>
+          {benefitsList
+            .slice()
+            .splice(-middleIndex)
+            .map((item, idx) => {
+              return (
+                <Bounce key={idx}>
+                  <BenefitsItem>
+                    <BenefitsItemImage>
+                      <Image src={item.icon} alt="ilustation" />
+                    </BenefitsItemImage>
+                    <BenefitsItemTitle>{item.title}</BenefitsItemTitle>
+                    <BenefitsItemText>{item.desc}</BenefitsItemText>
+                  </BenefitsItem>
+                </Bounce>
+              )
+            })}
         </BenefitsGroup>
       </BenefitsList>
     </BenefitsWrapper>

@@ -12,10 +12,10 @@ export const f1 = {
 }
 
 export const f2 = {
-  title: 'Automatically post & delete promo posts',
-  desc: <Image src={featuresTwo} />,
-}
-export const f3 = {
   title: 'Generate statistics for every campaign',
   desc: <Image src={featuresThree} />,
+}
+export const f3 = {
+  title: 'Automatically post & delete promo posts',
+  desc: <Image src={featuresTwo} />,
 }

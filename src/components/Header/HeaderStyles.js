@@ -6,6 +6,9 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   padding: 1rem;
   overflow: hidden;
+  margin-bottom: 5vh;
+  position: relative;
+  z-index: 1;
 
   @media ${(props) => props.theme.breakpoints.md} {
     flex-direction: row;
@@ -27,7 +30,8 @@ export const MobileMenu = styled.nav`
   display: none;
   @media ${(props) => props.theme.breakpoints.md} {
     display: block;
-    position: absolute;
+    position: fixed;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     z-index: 9;
@@ -100,7 +104,7 @@ export const Burger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 9;
   > * {
     &:not(&:last-child) {
       margin-bottom: 0.9rem;
@@ -118,7 +122,7 @@ export const Burger = styled.button`
     background: ${(props) =>
       props.open ? '#EFFFFA' : `${props.theme.colors.accent1}`};
     border-radius: 10px;
-    transition: all 0.3s linear;
+    transition: all 0.5s linear;
     position: relative;
     transform-origin: 1px;
 
@@ -136,5 +140,11 @@ export const Burger = styled.button`
     :nth-child(3) {
       transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    position: ${({ open }) => open && 'absolute'};
+    top: 5%;
+    right: 5%;
   }
 `

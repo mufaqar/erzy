@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   HeaderWrapper,
   HeaderLogo,
@@ -26,7 +26,10 @@ import Link from 'next/link'
 export const Header = () => {
   const [open, setOpen] = useState(false)
   const { width } = useWindowSize()
-
+  useEffect(() => {
+    const body = document.querySelector('body')
+    body.style.overflow = open ? 'hidden' : 'auto'
+  }, [open])
   return (
     <>
       <HeaderWrapper>
@@ -57,10 +60,15 @@ export const Header = () => {
         </Burger>
       </HeaderWrapper>
       <MobileMenu open={open}>
+        <Burger open={open} onClick={() => setOpen(!open)}>
+          <div />
+          <div />
+          <div />
+        </Burger>
         <MobileMenuList>
           {navItems.map((item) => {
             return (
-              <MobileMenuItem key={item.name}>
+              <MobileMenuItem key={item.name} onClick={() => setOpen(false)}>
                 <Link href={item.ref}>{item.name}</Link>
               </MobileMenuItem>
             )
