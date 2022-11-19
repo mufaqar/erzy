@@ -10,12 +10,7 @@ import { Questions } from '../components/Questions/Questions';
 export default function Channel() {
   return (
     <Layout>
-      <Hero />
-      <Benefits />
-      <Features />
       <HowItWorks />
-      <About />
-      <TryErzy />
       <Questions />
     </Layout>
   );
