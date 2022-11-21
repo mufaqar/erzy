@@ -148,3 +148,25 @@ export const Burger = styled.button`
     right: 5%;
   }
 `
+
+
+
+
+// ******************
+// bio Header 
+// *****************
+
+export const BHeader = styled.div`
+  height: 80px;
+  background: linear-gradient(70.91deg, #07A3B2 0%, #667EEA 100%);
+  position: relative;
+  img{
+    width: 95px;
+    height: 95px;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 3rem;
+  }
+`
