@@ -79,7 +79,17 @@ export const IntroSection = styled.section`
     margin-bottom: 40px;
     padding:  0 10px;
   }
-
+@media (max-width:768px) {
+  h1{
+    font-size: 22px;
+  }
+  ._button{
+      padding: 16px 66px;
+    }
+    .heading{
+      font-size: 36px;
+    }
+}
  
 `;
 
@@ -100,7 +110,7 @@ export const TagWrapper = styled.div`
     margin-bottom: 1rem;
     p{
       font-weight: 400;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 24px;
       margin-left: 1rem;
     }

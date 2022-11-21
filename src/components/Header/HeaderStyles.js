@@ -176,8 +176,33 @@ export const BHeader = styled.div`
   ._hamburger {
     font-size: 3.5rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+      margin: 0 .5rem;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+      
+    }
+    i{
+      margin-left: 1.5rem;
+      margin-top: 6px;
+    }
   }
   .logo {
     cursor: pointer;
   }
+<<<<<<< HEAD
 `;
+=======
+  @media (max-width: 768px) {
+    padding-bottom: 2rem;
+    ._profile{
+      top: 6.5rem;
+    }
+    
+  }
+`
+>>>>>>> main
