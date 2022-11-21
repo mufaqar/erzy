@@ -179,14 +179,13 @@ export const BHeader = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    a{
-      margin: 0 .5rem;
+    a {
+      margin: 0 0.5rem;
       color: white;
       font-size: 22px;
       cursor: pointer;
-      
     }
-    i{
+    i {
       margin-left: 1.5rem;
       margin-top: 6px;
     }
@@ -194,15 +193,10 @@ export const BHeader = styled.div`
   .logo {
     cursor: pointer;
   }
-<<<<<<< HEAD
-`;
-=======
   @media (max-width: 768px) {
     padding-bottom: 2rem;
-    ._profile{
-      top: 6.5rem;
+    ._profile {
+      top: 4rem;
     }
-    
   }
-`
->>>>>>> main
+`;

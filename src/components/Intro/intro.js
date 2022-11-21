@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   IntroSection,
   TagWrapper,
@@ -6,28 +6,26 @@ import {
   IntroContainer,
   FAQSection,
   BioFooter,
-} from "./introStyle";
+} from './introStyle';
 
 import {
   HowItWorksVideo,
   PlayPauseIcon,
   PlayPauseWrapper,
-} from "../HowItWorks/HowItWorksStyles";
+} from '../HowItWorks/HowItWorksStyles';
 
 import {
   QuestionsList,
   QuestionsListWrapper,
-} from "../Questions/QuestionsStyles";
+} from '../Questions/QuestionsStyles';
 
-import { QuestionItem } from "../QuestionItem/QuestionItem";
+import { QuestionItem } from '../QuestionItem/QuestionItem';
 // import { questions } from "../../constants/Questions";
-import Bounce from "react-reveal/Bounce";
-import { useRef, useState } from "react";
-import { FiUsers, FiStar, FiLock } from "react-icons/fi";
-import { useRouter } from "next/router";
-import { enUS, enFR } from '../../../public/translation'
-
-
+import Bounce from 'react-reveal/Bounce';
+import { useRef, useState } from 'react';
+import { FiUsers, FiStar, FiLock } from 'react-icons/fi';
+import { useRouter } from 'next/router';
+import { enUS, enFR } from '../../../public/translation';
 
 const Tag = ({ title, icon }) => {
   return (
@@ -38,16 +36,16 @@ const Tag = ({ title, icon }) => {
   );
 };
 
-export default function Intro({profileData}) {
+export default function Intro({ profileData }) {
   const vidRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const router = useRouter();
-  const {locale} = router
-  const t = locale === "en-US" ? enUS : enFR
+  const { locale } = router;
+  const t = locale === 'en-US' ? enUS : enFR;
   const questions = t.faq;
   const middleIndex = Math.ceil(questions.length / 2);
-  const {status} = profileData;
+  const { status } = profileData;
 
   const handlePlayPauseButton = () => {
     if (isPaused) {
@@ -98,7 +96,7 @@ export default function Intro({profileData}) {
             }
           >
             <video loop muted ref={vidRef}>
-              <source src="/videos/video.mp4" type="video/mp4" />
+              <source src={t.video_url} type="video/mp4" />
               video html tag doesnt work
             </video>
             <PlayPauseWrapper isVisible={isVisible}>
