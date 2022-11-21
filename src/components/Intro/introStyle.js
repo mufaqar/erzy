@@ -14,6 +14,7 @@ export const IntroSection = styled.section`
     text-align: center;
     color: #5385de;
     margin-top: 68px;
+    line-height: 32px;
   }
   .username {
     font-style: normal;
@@ -65,7 +66,7 @@ export const IntroSection = styled.section`
     line-height: 64px;
   }
   ._text {
-    width: 758px;
+    max-width: 758px;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
@@ -76,13 +77,17 @@ export const IntroSection = styled.section`
     margin: 0 auto;
     margin-top: 28px;
     margin-bottom: 40px;
+    padding:  0 10px;
   }
+
+ 
 `;
 
 export const TagWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+ 
   .tag_wrapper{
     display: flex;
     align-items: center;
@@ -101,6 +106,11 @@ export const TagWrapper = styled.div`
     }
     i{
       font-size: 18px;
+    }
+  }
+  @media (max-width: 768px) {
+    .tag_wrapper{
+      padding: 10px 10px;
     }
   }
 `;
@@ -136,10 +146,12 @@ export const FAQSection = styled.div`
  margin-top: 124px;
  text-align: center;
  margin-bottom: 8rem;
+ padding: 0 10px;
  .heading{
   max-width: 623px;
   margin: 0 auto;
   margin-bottom: 3rem;
+
  }
 `
 
@@ -148,3 +160,5 @@ min-height: 138px;
 width: 100%;
 background: #000000;
 `
+
+
