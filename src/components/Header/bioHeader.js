@@ -1,16 +1,21 @@
-import React from 'react';
-import { BHeader } from './HeaderStyles';
-import profile from '../../../public/images/Benefits4.png';
-import logo from '../../../public/images/smallLogo.png';
-import Image from 'next/image';
+import React from "react";
+import { BHeader } from "./HeaderStyles";
+import profile from "../../../public/images/_profile.png";
+import logo from "../../../public/images/smallLogo.png";
+import { RiMenu3Fill } from "react-icons/ri";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function BioHeader() {
   return (
     <BHeader>
       <div>
-        <img src={logo} alt="profile" />
+        <Link href='/'><figure className="logo"><Image src={logo} alt="profile" width={160} height={90} /></figure></Link>
       </div>
-      <Image src={profile} alt="profile" width={90} height={90} />
+      <div className="_hamburger">
+        <RiMenu3Fill />
+      </div>
+      <figure className="_profile"><Image src={profile}  alt="profile" width={90} height={90} /></figure>
     </BHeader>
   );
 }

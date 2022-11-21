@@ -157,16 +157,31 @@ export const Burger = styled.button`
 // *****************
 
 export const BHeader = styled.div`
-  height: 80px;
+  /* height: 80px; */
   background: linear-gradient(70.91deg, #07A3B2 0%, #667EEA 100%);
   position: relative;
-  img{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0 2rem;
+  ._profile{
     width: 95px;
     height: 95px;
     border-radius: 100%;
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
-    top: 3rem;
+    top: 4.5rem;
+    padding: 5px;
+    background: #fff;
+   
+  }
+  ._hamburger{
+    font-size: 3.5rem;
+    cursor: pointer;
+  }
+  .logo{
+    cursor: pointer;
   }
 `
