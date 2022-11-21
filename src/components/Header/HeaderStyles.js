@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -13,11 +13,11 @@ export const HeaderWrapper = styled.header`
   @media ${(props) => props.theme.breakpoints.md} {
     flex-direction: row;
   }
-`
+`;
 export const HeaderLogo = styled.div`
   margin-right: 1rem;
   user-select: none;
-`
+`;
 
 export const Navbar = styled.nav`
   display: flex;
@@ -25,7 +25,7 @@ export const Navbar = styled.nav`
   @media ${(props) => props.theme.breakpoints.md} {
     display: none;
   }
-`
+`;
 export const MobileMenu = styled.nav`
   display: none;
   @media ${(props) => props.theme.breakpoints.md} {
@@ -43,7 +43,7 @@ export const MobileMenu = styled.nav`
     transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
     transition: 0.3s ease transform;
   }
-`
+`;
 export const NavList = styled.ul`
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@ export const NavList = styled.ul`
   @media ${(props) => props.theme.breakpoints.md} {
     flex-direction: column;
   }
-`
+`;
 
 export const MobileMenuList = styled.ul`
   display: flex;
@@ -69,7 +69,7 @@ export const MobileMenuList = styled.ul`
       margin-bottom: 2rem;
     }
   }
-`
+`;
 
 export const NavItem = styled.li`
   flex-shrink: 0;
@@ -81,7 +81,7 @@ export const NavItem = styled.li`
       color: ${(props) => props.theme.colors.secondary1};
     }
   }
-`
+`;
 export const MobileMenuItem = styled.li`
   border-bottom: 5px solid transparent;
   transition: 0.3s ease all;
@@ -95,7 +95,7 @@ export const MobileMenuItem = styled.li`
   &:hover {
     border-color: #effffa;
   }
-`
+`;
 
 export const Burger = styled.button`
   display: none;
@@ -147,25 +147,22 @@ export const Burger = styled.button`
     top: 5%;
     right: 5%;
   }
-`
-
-
-
+`;
 
 // ******************
-// bio Header 
+// bio Header
 // *****************
 
 export const BHeader = styled.div`
-  /* height: 80px; */
-  background: linear-gradient(70.91deg, #07A3B2 0%, #667EEA 100%);
+  height: 80px;
+  background: linear-gradient(70.91deg, #07a3b2 0%, #667eea 100%);
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
   padding: 0 2rem;
-  ._profile{
+  ._profile {
     width: 95px;
     height: 95px;
     border-radius: 100%;
@@ -175,13 +172,12 @@ export const BHeader = styled.div`
     top: 4.5rem;
     padding: 5px;
     background: #fff;
-   
   }
-  ._hamburger{
+  ._hamburger {
     font-size: 3.5rem;
     cursor: pointer;
   }
-  .logo{
+  .logo {
     cursor: pointer;
   }
-`
+`;
