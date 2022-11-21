@@ -28,7 +28,7 @@ import { FiUsers, FiStar, FiLock } from 'react-icons/fi';
 // data
 export const questions = [
   {
-    title: 'How many channels can participate in the cross-promotion?   01 ',
+    title: 'How many channels can participate in the cross-promotion?  ',
     body: 'Erzy allows 1:1 cross-promotion therefore only two channels can participate in one cross-promotion. We found 1-to-1 cross-promotions are more effective because they are easier to track, and they look more organic unlike Mega(when channel pile up and share dozens of links). If cross-promotion with a particular channel was successful you can schedule more cross-promotions with this channel in the coming months.     ',
   },
   {
