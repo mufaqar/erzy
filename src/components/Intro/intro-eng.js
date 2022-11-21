@@ -6,7 +6,7 @@ import {
   IntroContainer,
   FAQSection,
   BioFooter,
-} from "./introStyle";
+} from "../Intro/introStyle";
 
 import {
   HowItWorksVideo,
