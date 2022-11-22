@@ -16,6 +16,7 @@ const profileData = {
     star: '9.3',
     visibility: 'Public',
   },
+  inviteLink: 'https://app.erzy.net/login?inviteId=iy50gs7J'
 };
 
 export default function Bio() {
