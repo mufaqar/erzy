@@ -1,6 +1,6 @@
 export const enUS = {
   video_section_title: 'How does Erzy work?',
-  video_url: 'https://youtu.be/GV4nYCNOmSs',
+  video_url: 'GV4nYCNOmSs',
   video_section_desc:
     'You can install Erzy with a simple 3-step process that hardly takes 2 minutes: login to the platform; add our bot to your channel and create a promo post. Once you have installed Erzy you can start scheduling cross-promotions. To see the whole process check out the video tutorial below:',
   faq_title: 'Faq',
@@ -50,8 +50,7 @@ export const enUS = {
 
 export const enFR = {
   video_section_title: 'Как работает Erzy?',
-  video_url: 'https://youtu.be/Bc4TXOumwVE',
-
+  video_url: 'Bc4TXOumwVE',
   video_section_desc:
     'Вы можете установить Erzy с помощью простого трехэтапного процесса, который займет всего 2 минуты: войдите на платформу, добавьте нашего бота на свой канал и создайте промо-пост. После установки Erzy вы можете начать планировать взаимный пиар. Чтобы увидеть весь процесс, посмотрите видеоинструкцию ниже:',
   faq_title: 'Часто Задаваемые Вопросы',

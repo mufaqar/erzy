@@ -172,6 +172,9 @@ export const BHeader = styled.div`
     top: 4.5rem;
     padding: 5px;
     background: #fff;
+    img {
+      border-radius: 50%;
+    }
   }
   ._hamburger {
     font-size: 3.5rem;

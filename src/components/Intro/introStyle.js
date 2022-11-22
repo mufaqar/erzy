@@ -1,12 +1,27 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const IntroSection = styled.section`
+  .video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 20px;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   h1 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
@@ -26,7 +41,7 @@ export const IntroSection = styled.section`
     margin-top: 20px;
   }
   ._button {
-    font-family: "Roboto";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -42,13 +57,10 @@ export const IntroSection = styled.section`
     border-radius: 8px;
   }
   .div {
-    min-width: 286px;
-    min-height: 215px;
-    background: #d9d9d9;
     margin-top: 30px;
   }
   .detail {
-    font-family: "Roboto";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -59,7 +71,7 @@ export const IntroSection = styled.section`
     max-width: 284px;
   }
   .heading {
-    font-family: "Raleway";
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
@@ -67,7 +79,7 @@ export const IntroSection = styled.section`
   }
   ._text {
     max-width: 758px;
-    font-family: "Roboto";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -77,49 +89,48 @@ export const IntroSection = styled.section`
     margin: 0 auto;
     margin-top: 28px;
     margin-bottom: 40px;
-    padding:  0 10px;
+    padding: 0 10px;
   }
-@media (max-width:768px) {
-  h1{
-    font-size: 22px;
-  }
-  ._button{
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 22px;
+    }
+    ._button {
       padding: 16px 66px;
     }
-    .heading{
+    .heading {
       font-size: 36px;
     }
-}
- 
+  }
 `;
 
 export const TagWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
- 
-  .tag_wrapper{
+
+  .tag_wrapper {
     display: flex;
     align-items: center;
-    border: 2px solid #C2C9D1;
-    border-radius:8px;
+    border: 2px solid #c2c9d1;
+    border-radius: 8px;
     padding: 15px 25px;
-    color: #C2C9D1;
+    color: #c2c9d1;
     margin: 0 8px;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    p{
+    p {
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
       margin-left: 1rem;
     }
-    i{
+    i {
       font-size: 18px;
     }
   }
   @media (max-width: 768px) {
-    .tag_wrapper{
+    .tag_wrapper {
       padding: 10px 10px;
     }
   }
@@ -135,7 +146,7 @@ export const VideoSection = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  video{
+  video {
     border-radius: 32px;
   }
   background: linear-gradient(
@@ -153,22 +164,19 @@ export const IntroContainer = styled.div`
 `;
 
 export const FAQSection = styled.div`
- margin-top: 124px;
- text-align: center;
- margin-bottom: 8rem;
- padding: 0 10px;
- .heading{
-  max-width: 623px;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-
- }
-`
+  margin-top: 124px;
+  text-align: center;
+  margin-bottom: 8rem;
+  padding: 0 10px;
+  .heading {
+    max-width: 623px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+`;
 
 export const BioFooter = styled.div`
-min-height: 138px;
-width: 100%;
-background: #000000;
-`
-
-
+  min-height: 138px;
+  width: 100%;
+  background: #000000;
+`;

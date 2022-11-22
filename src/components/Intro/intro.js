@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import {
   IntroSection,
   TagWrapper,
@@ -37,6 +38,7 @@ const Tag = ({ title, icon }) => {
 };
 
 export default function Intro({ profileData }) {
+  console.log(profileData);
   const vidRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -74,14 +76,21 @@ export default function Intro({ profileData }) {
       </TagWrapper>
 
       <button className="_button">Начать Взаимный Пиар</button>
-      <div className="div"></div>
+      <div className="div">
+        <Image
+          src={profileData.poster.poster.src}
+          alt=""
+          width={286}
+          height={220}
+        />
+      </div>
       <p className="detail">{profileData.content}</p>
 
       <VideoSection>
         <IntroContainer>
           <h2 className="heading">{t.video_section_title}</h2>
           <p className="_text">{t.video_section_desc}</p>
-          <HowItWorksVideo
+          {/* <HowItWorksVideo
             onClick={handlePlayPauseButton}
             onMouseEnter={() =>
               setTimeout(() => {
@@ -105,7 +114,26 @@ export default function Intro({ profileData }) {
                 onClick={handlePlayPauseButton}
               />
             </PlayPauseWrapper>
-          </HowItWorksVideo>
+          </HowItWorksVideo> */}
+          {/* <div style={{ position: 'relative' }}>
+            <iframe
+              width="420"
+              height="315"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            ></iframe>
+          </div> */}
+
+          <div className="video-responsive">
+            <iframe
+              width="853"
+              height="480"
+              src={`https://www.youtube.com/embed/${t.video_url}`}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Embedded youtube"
+            />
+          </div>
         </IntroContainer>
       </VideoSection>
 
