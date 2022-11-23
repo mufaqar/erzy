@@ -5,7 +5,7 @@ import profile from '../../public/images/car.jpg';
 import poster from '../../public/images/car.jpg';
 
 const profileData = {
-  imageUrl: '',
+  imageUrl: { profile },
   title: 'Дагестанские авиалинии с Махачем',
   username: 'makhach_tyagach',
   poster: { poster },
@@ -16,7 +16,7 @@ const profileData = {
     star: '9.3',
     visibility: 'Public',
   },
-  inviteLink: 'https://app.erzy.net/login?inviteId=iy50gs7J'
+  inviteLink: 'https://app.erzy.net/login?inviteId=iy50gs7J',
 };
 
 export default function Bio() {

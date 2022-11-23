@@ -9,7 +9,6 @@ import {
   BioFooter,
 } from './introStyle';
 
-
 import {
   QuestionsList,
   QuestionsListWrapper,
@@ -44,23 +43,29 @@ export default function Intro({ profileData }) {
   const middleIndex = Math.ceil(questions.length / 2);
   const { status } = profileData;
 
-
   return (
     <IntroSection>
       <h1>{profileData.title}</h1>
-      {profileData.username && (<p className="username">@{profileData.username}</p>)}
+      {profileData.username && (
+        <p className="username">@{profileData.username}</p>
+      )}
       <TagWrapper>
         <Tag icon={<FiUsers />} title={status.sub} />
         <Tag icon={<FiStar />} title={status.star} />
         <Tag icon={<FiLock />} title={status.visibility} />
       </TagWrapper>
 
-      <button className="_button" onClick={() => (window.location = `${profileData.inviteLink}`)}>
-      {profileData.language === 'Russian' ? 'Начать Взаимный Пиар' : 'Start cross promotion'}
-        </button>
+      <button
+        className="_button"
+        onClick={() => (window.location = `${profileData.inviteLink}`)}
+      >
+        {profileData.language === 'Russian'
+          ? 'Начать Взаимный Пиар'
+          : 'Start cross promotion'}
+      </button>
       <div className="div">
         <Image
-          src={profileData.poster}
+          src={profileData.poster.poster.src}
           alt=""
           width={286}
           height={220}
