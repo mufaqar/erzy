@@ -92,7 +92,7 @@ export default function Intro({ profileData }) {
           <p className="_text">{t.video_section_desc}</p>
           <div className="video-responsive">
             <iframe
-              width="854"
+              width="853"
               height="480"
               src={`https://www.youtube.com/embed/${t.video_url}`}
               frameBorder="0"
