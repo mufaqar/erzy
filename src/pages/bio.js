@@ -5,7 +5,8 @@ import profile from '../../public/images/car.jpg';
 import poster from '../../public/images/car.jpg';
 
 const profileData = {
-  imageUrl: { profile },
+  //imageUrl: { profile },
+  imageUrl: '',
   title: 'Дагестанские авиалинии с Махачем',
   username: 'makhach_tyagach',
   poster: { poster },
