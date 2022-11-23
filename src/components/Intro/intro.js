@@ -90,39 +90,6 @@ export default function Intro({ profileData }) {
         <IntroContainer>
           <h2 className="heading">{t.video_section_title}</h2>
           <p className="_text">{t.video_section_desc}</p>
-          {/* <HowItWorksVideo
-            onClick={handlePlayPauseButton}
-            onMouseEnter={() =>
-              setTimeout(() => {
-                setIsVisible(true);
-              }, 2000)
-            }
-            onMouseLeave={() =>
-              isPaused &&
-              setTimeout(() => {
-                setIsVisible(false);
-              }, 2000)
-            }
-          >
-            <video loop muted ref={vidRef}>
-              <source src={t.video_url} type="video/mp4" />
-              video html tag doesnt work
-            </video>
-            <PlayPauseWrapper isVisible={isVisible}>
-              <PlayPauseIcon
-                isPaused={isPaused}
-                onClick={handlePlayPauseButton}
-              />
-            </PlayPauseWrapper>
-          </HowItWorksVideo> */}
-          {/* <div style={{ position: 'relative' }}>
-            <iframe
-              width="420"
-              height="315"
-              src="https://www.youtube.com/embed/tgbNymZ7vqY"
-            ></iframe>
-          </div> */}
-
           <div className="video-responsive">
             <iframe
               width="853"
