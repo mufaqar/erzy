@@ -20,7 +20,7 @@ import { QuestionItem } from '../QuestionItem/QuestionItem';
 import Bounce from 'react-reveal/Bounce';
 import { useRef, useState } from 'react';
 import { FiUsers, FiStar, FiLock } from 'react-icons/fi';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import { enUS, enFR } from '../../../public/translation';
 
 const Tag = ({ title, icon }) => {
@@ -37,9 +37,9 @@ export default function Intro({ profileData }) {
   const vidRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const router = useRouter();
-  const { locale } = router;
-  const t = locale === 'en-US' ? enUS : enFR;
+  // const router = useRouter();
+  // const { locale } = router;
+  const t = profileData.language === 'Russian' ? enFR : enUS;
   const questions = t.faq;
   const middleIndex = Math.ceil(questions.length / 2);
   const { status } = profileData;
@@ -48,17 +48,19 @@ export default function Intro({ profileData }) {
   return (
     <IntroSection>
       <h1>{profileData.title}</h1>
-      <p className="username">@{profileData.username}</p>
+      {profileData.username && (<p className="username">@{profileData.username}</p>)}
       <TagWrapper>
         <Tag icon={<FiUsers />} title={status.sub} />
         <Tag icon={<FiStar />} title={status.star} />
         <Tag icon={<FiLock />} title={status.visibility} />
       </TagWrapper>
 
-      <button className="_button">Начать Взаимный Пиар</button>
+      <button className="_button" onClick={() => (window.location = `${profileData.inviteLink}`)}>
+      {profileData.language === 'Russian' ? 'Начать Взаимный Пиар' : 'Start cross promotion'}
+        </button>
       <div className="div">
         <Image
-          src={profileData.poster.poster.src}
+          src={profileData.poster}
           alt=""
           width={286}
           height={220}

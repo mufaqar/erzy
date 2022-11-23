@@ -21,7 +21,7 @@ export const IntroSection = styled.section`
   align-items: center;
   flex-direction: column;
   h1 {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
@@ -32,6 +32,7 @@ export const IntroSection = styled.section`
     line-height: 32px;
   }
   .username {
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
@@ -42,7 +43,8 @@ export const IntroSection = styled.section`
     margin-top: 20px;
   }
   ._button {
-    font-family: 'Poppins';
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -81,7 +83,7 @@ export const IntroSection = styled.section`
   }
   ._text {
     max-width: 758px;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
