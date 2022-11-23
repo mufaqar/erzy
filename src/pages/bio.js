@@ -21,7 +21,7 @@ const profileData = {
 export default function Bio() {
   return (
     <>
-      <BioHeader imageUrl={profileData.imageUrl.profile.src} />
+      <BioHeader imageUrl={profileData.imageUrl?.profile?.src} />
       <Intro profileData={profileData} />
     </>
   );

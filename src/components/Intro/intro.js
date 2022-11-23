@@ -9,11 +9,6 @@ import {
   BioFooter,
 } from './introStyle';
 
-import {
-  HowItWorksVideo,
-  PlayPauseIcon,
-  PlayPauseWrapper,
-} from '../HowItWorks/HowItWorksStyles';
 
 import {
   QuestionsList,
@@ -49,21 +44,6 @@ export default function Intro({ profileData }) {
   const middleIndex = Math.ceil(questions.length / 2);
   const { status } = profileData;
 
-  const handlePlayPauseButton = () => {
-    if (isPaused) {
-      vidRef.current.pause();
-      setIsVisible(true);
-      setIsPaused(false);
-    } else {
-      vidRef.current.play();
-
-      setIsPaused(true);
-      setIsVisible(true);
-      setTimeout(() => {
-        setIsVisible(false);
-      }, 2000);
-    }
-  };
 
   return (
     <IntroSection>

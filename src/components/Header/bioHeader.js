@@ -27,9 +27,9 @@ export default function BioHeader({ imageUrl }) {
           <RiMenu3Fill />
         </i>
       </div>
-      <figure className="_profile">
+      {imageUrl && <figure className="_profile">
         <Image src={imageUrl} alt="profile" width={90} height={90} />
-      </figure>
+      </figure>}
     </BHeader>
   );
 }
